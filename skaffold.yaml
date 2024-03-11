@@ -16,4 +16,6 @@ manifests:
     - k8s/01-namespace.yaml
     - k8s/02-service.yaml
     - k8s/03-serviceaccount.yaml
-    - k8s/04-deployment.yaml
+    - k8s/04-clusterrole.yaml
+    - k8s/05-clusterrolebinding.yaml
+    - k8s/06-deployment.yaml
