@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellotype
+  namespace: hellotype
+  labels:
+    app: hellotype
+spec:
+  selector:
+    matchLabels:
+      app: hellotype
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hellotype
+    spec:
+      containers:
+      - name: hellotype
+        image: hellotype
+      serviceAccountName: hellotype
+

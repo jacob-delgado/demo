@@ -1,0 +1,19 @@
+apiVersion: skaffold/v4beta9
+kind: Config
+metadata:
+  name: demo
+build:
+  artifacts:
+    - image: hellotype
+      docker:
+        dockerfile: Dockerfile
+  local: {}
+deploy:
+  kubectl: {}
+manifests:
+  rawYaml:
+    - crd.yaml
+    - k8s/01-namespace.yaml
+    - k8s/02-service.yaml
+    - k8s/03-serviceaccount.yaml
+    - k8s/04-deployment.yaml
