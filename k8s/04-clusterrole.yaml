@@ -5,9 +5,9 @@ metadata:
   labels:
     app: hellotype
 rules:
-- apiGroups: ["apps"]
-  verbs: [ "get", "watch", "list", "update", "patch", "create", "delete" ]
-  resources: [ "deployments" ]
-- apiGroups: ["foo.com"]
-  verbs: [ "get", "watch", "list", "update", "patch", "create", "delete" ]
-  resources: [ "hellotypes" ]
+  - apiGroups: [ "apps", "extensions" ]
+    verbs: [ "get", "watch", "list", "update", "patch", "create", "delete" ]
+    resources: [ "deployments" ]
+  - apiGroups: ["foo.com"]
+    verbs: [ "get", "watch", "list", "update", "patch", "create", "delete" ]
+    resources: [ "hellotypes", "hellotypes/status" ]
